@@ -7,7 +7,10 @@ app.get('/', (req, res, next) => {
   const software = userAgent.substring(userAgent.indexOf('(') + 1, userAgent.indexOf(')'));
 
   res.send({
-    'ipaddress': req.ip,
+    'ipaddress': req.headers['x-forwarded-for'] ||
+      req.connection.remoteAddress ||
+      req.socket.remoteAddress ||
+      req.connection.socket.remoteAddress,
     'language': req.headers["accept-language"].split(',')[0],
     'software': software
   });
