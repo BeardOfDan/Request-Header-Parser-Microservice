@@ -1,0 +1,27 @@
+{
+  "name": "request-header-parser-microservice",
+  "version": "1.0.0",
+  "description": "Returns a json with the ip address, language, and operating system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeardOfDan/Request-Header-Parser-Microservice.git"
+  },
+  "author": "Dan Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeardOfDan/Request-Header-Parser-Microservice/issues"
+  },
+  "homepage": "https://github.com/BeardOfDan/Request-Header-Parser-Microservice#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  }
+}
